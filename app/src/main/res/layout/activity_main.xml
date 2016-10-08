@@ -1,0 +1,32 @@
+<com.bupt.itnews.widget.DragLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drag_layout"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@mipmap/head_bg">
+    <include layout="@layout/left_view_layout"/>
+    <com.bupt.itnews.widget.CustomRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="bottom">
+            <include layout="@layout/top_bar_common_layout"/>
+            <FrameLayout
+                android:id="@+id/fragmetLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <fragment
+                    android:id="@+id/main_info_fragment"
+                    class ="com.bupt.itnews.fragment.MainInfoFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </com.bupt.itnews.widget.CustomRelativeLayout>
+
+</com.bupt.itnews.widget.DragLayout>
